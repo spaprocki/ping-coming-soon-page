@@ -7,7 +7,11 @@ submitButtonElement.addEventListener('click', evaluateEmail);
 function evaluateEmail(event) {
   event.preventDefault();
   if (!emailIsValid(emailInputElement)) {
-    showError();
+    if (emailInputElement.value == '') {
+      showErrorEmpty();
+    } else {
+      showErrorWrong();
+    }
     moveSubmitButtonDown();
   } else {
     clearError();
@@ -24,8 +28,16 @@ function emailIsValid(emailInput) {
   } else return false;
 }
 
-function showError() {
+function showErrorEmpty() {
   errorMessageElement.classList.add('visible');
+  errorMessageElement.textContent =
+    'Whoops! It looks like you forgot to add your email';
+  emailInputElement.classList.add('error');
+}
+
+function showErrorWrong() {
+  errorMessageElement.classList.add('visible');
+  errorMessageElement.textContent = 'Please provide a valid email address';
   emailInputElement.classList.add('error');
 }
 
