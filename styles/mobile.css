@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+/* Design system styles */
+
+:root {
+  --light-red: hsl(354, 100%, 66%);
+  --blue: hsl(223, 87%, 63%);
+  --blue-hover: hsla(223, 87%, 63%, 0.8);
+
+  --pale-blue: hsl(223, 100%, 88%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+body {
+  background: #fff;
+  font-family: 'Libre Franklin', 'sans-serif';
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--very-dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding: 5rem 1rem 0 1rem;
+}
+
+.header-logo {
+  width: clamp(3.5rem, 3.19vw + 2.75rem, 5.625rem);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.page-heading {
+  margin-top: clamp(2rem, 0.75vw + 1.82rem, 2.5rem);
+  font-size: clamp(1.375rem, 2.44vw + 0.8rem, 3rem);
+  line-height: clamp(2rem, 2.63vw + 1.38rem, 3.75rem);
+  font-weight: 300;
+  color: var(--gray);
+  text-align: center;
+}
+
+.page-heading span {
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+.main-paragraph {
+  margin-top: 1rem;
+  font-size: clamp(0.75rem, 0.75vw + 0.57rem, 1.25rem);
+  line-height: clamp(0.9375rem, 0.85vw + 0.74rem, 1.5rem);
+  text-align: center;
+  color: var(--very-dark-blue);
+}
+
+.hero-form {
+  margin-top: clamp(2rem, 0.75vw + 1.82rem, 2.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: clamp(16.25rem, 35.4vw + 7.95rem, 39.8125rem);
+  gap: 0.625rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  padding-left: 2rem;
+  max-width: 26.25rem;
+  height: clamp(2.5rem, 1.5vw + 2.15rem, 3.5rem);
+  font-size: clamp(0.75rem, 0.38vw + 0.66rem, 1rem);
+  line-height: 1.25rem;
+  border: 1px solid var(--pale-blue);
+  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.0001);
+  border-radius: 1.75rem;
+}
+
+.form-control::placeholder {
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: var(--pale-blue);
+}
+
+.form-control:focus {
+  outline: none;
+  background: white;
+  border-style: inset;
+  border: 1px solid var(--blue);
+}
+
+.form-control.error {
+  border: 1px solid var(--light-red);
+}
+
+.error-message {
+  opacity: 0;
+  position: absolute;
+  top: clamp(2.625rem, 1.88vw + 2.18rem, 3.875rem);
+  left: 2rem;
+  text-align: left;
+  font-style: italic;
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  color: var(--light-red);
+  transition: opacity ease-in-out 0.3s;
+}
+
+.error-message.visible {
+  opacity: 1;
+}
+
+.form-control.submit-button {
+  position: absolute;
+  top: clamp(3.125rem, 1.5vw + 2.77rem, 4.125rem);
+  width: 100%;
+  min-width: 7.5rem;
+  padding-left: 0;
+  background-color: var(--blue);
+  box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.230414);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  flex: 1;
+  transition: top ease-in-out 0.3s;
+}
+
+.form-control.submit-button:active {
+  background-color: var(--blue-hover);
+}
+
+.hero-image {
+  margin-top: clamp(94px, -2.63vw + 8.24rem, 122px);
+  width: clamp(320px, 30.05vw + 12.96rem, 640px);
+}
+
+.icons-container {
+  margin-top: clamp(4.5rem, -4.51vw + 8.56rem, 7.5rem);
+  display: flex;
+  justify-content: center;
+  gap: 0.6875rem;
+}
+
+.icon {
+  border: 0.918357px solid var(--pale-blue);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--blue);
+  transition: border-color ease-in 0.1s, color ease-in 0.1s;
+}
+
+.icon:visited {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.icon:hover {
+  color: #fff;
+  background-color: var(--blue);
+}
+
+i {
+  color: inherit;
+  font-size: 0.9375rem;
+}
+
+i:hover {
+  color: inherit;
+}
+
+.footer-paragraph {
+  margin-top: 1.625rem;
+  font-size: clamp(0.625rem, 0.19vw + 0.58rem, 0.75rem);
+  line-height: clamp(0.75rem, 0.28vw + 0.68rem, 0.9375rem);
+  color: var(--gray);
+  text-align: center;
+}
+
+.attribution {
+  font-family: 'Montserrat', 'sans-serif';
+  flex: none;
+  padding: 0.625rem;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  color: var(--gray);
+}
+
+.attribution a,
+.attribution a:visited {
+  text-decoration: underline;
+  color: var(--gray);
+}
+
+.attribution a:hover {
+  font-weight: 500;
+}
+
+@media (min-width: 48rem) {
+  .form-control.submit-button {
+    position: static;
+  }
+}
+
+@media (min-width: 78rem) {
+}

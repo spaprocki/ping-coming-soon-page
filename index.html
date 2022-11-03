@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/mobile.css" />
+
+    <script src="./scripts/email_validation.js" defer></script>
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="PING. logo" class="header-logo" />
+    </header>
+    <main>
+      <h1 class="page-heading">We are launching <span>soon!</span></h1>
+      <p class="main-paragraph">Subscribe and get notified</p>
+      <form class="hero-form">
+        <input
+          class="form-control"
+          type="email"
+          id="email-address"
+          name="email"
+          placeholder="Your email address..."
+        />
+        <button
+          id="submit-button"
+          class="form-control submit-button"
+          type="submit"
+        >
+          Notify Me
+        </button>
+        <p id="error-message" class="error-message">
+          Please provide a valid email address
+        </p>
+      </form>
+      <img
+        src="./images/illustration-dashboard.png"
+        alt="A browser window with a smoothened-out preview of an app dashboard with four charts and a sidebar. Slack logo can be seen in bottom left corner of the browser window. Behind browser window there are geometrical shapes"
+        class="hero-image"
+      />
+    </main>
+    <footer>
+      <div class="icons-container">
+        <a class="icon" href="#" aria-label="Enter facebook page"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a class="icon" href="#" aria-label="Enter twitter page"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a class="icon" href="#" aria-label="Enter instagram page"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+      <p class="footer-paragraph">
+        &copy; Copyright Ping. All rights reserved.
+      </p>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://www.frontendmentor.io/profile/spaprocki"
+          target="_blank"
+          >spaprocki</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>
